@@ -1,8 +1,9 @@
 import java.util.Scanner;
-public class Exercicio03 {
-    public static void main(String[] args) {
+import java.util.ArrayList;
 
-//        Scanner scanner = new Scanner(System.in);
+public class Exercicio04 {
+    public static void main(String[] args) {
+        ArrayList<String> arrayList = new ArrayList<>();
         String perg = "sim";
         while(!perg.equals("fim") ){
             Scanner in = new Scanner(System.in);
@@ -19,15 +20,25 @@ public class Exercicio03 {
             if(c == 1){
                 int result = a+b;
                 System.out.println("o resultado é "+result);
+                arrayList.add(String.valueOf(a)+"+"+String.valueOf(b)+"= "+String.valueOf(result));
+                System.out.println(arrayList);
             } else if(c == 2){
                 int result = a-b;
                 System.out.println("o resultado é "+result);
+                arrayList.add(String.valueOf(a)+"-"+String.valueOf(b)+"= "+String.valueOf(result));
+                System.out.println(arrayList);
             } else if (c == 3) {
                 int result = a*b;
                 System.out.println("o resultado é "+result);
+                arrayList.add(String.valueOf(a)+"*"+String.valueOf(b)+"= "+String.valueOf(result));
+                for(int i=0; i<arrayList.size(); i++){
+                    System.out.println(arrayList.get(i));
+                }
             }else if(c == 4) {
                 float result = a/b;
                 System.out.println("o resultado é "+result);
+                arrayList.add(String.valueOf(a)+"/"+String.valueOf(b)+"= "+String.valueOf(result));
+                System.out.println(arrayList);
             };
             System.out.println("Quer continuar calculando?\n" +
                     "Escreva: " +
