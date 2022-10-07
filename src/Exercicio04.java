@@ -21,30 +21,28 @@ public class Exercicio04 {
                 int result = a+b;
                 System.out.println("o resultado é "+result);
                 arrayList.add(String.valueOf(a)+"+"+String.valueOf(b)+"= "+String.valueOf(result));
-                System.out.println(arrayList);
             } else if(c == 2){
                 int result = a-b;
                 System.out.println("o resultado é "+result);
                 arrayList.add(String.valueOf(a)+"-"+String.valueOf(b)+"= "+String.valueOf(result));
-                System.out.println(arrayList);
             } else if (c == 3) {
                 int result = a*b;
                 System.out.println("o resultado é "+result);
                 arrayList.add(String.valueOf(a)+"*"+String.valueOf(b)+"= "+String.valueOf(result));
-                for(int i=0; i<arrayList.size(); i++){
-                    System.out.println(arrayList.get(i));
-                }
             }else if(c == 4) {
                 float result = a/b;
                 System.out.println("o resultado é "+result);
                 arrayList.add(String.valueOf(a)+"/"+String.valueOf(b)+"= "+String.valueOf(result));
-                System.out.println(arrayList);
             };
             System.out.println("Quer continuar calculando?\n" +
                     "Escreva: " +
                     "\nSim para continuar" +
                     "\nfim para parar");
             perg = scanner.nextLine();
+        }
+        System.out.println("Histórico de cálculos:");
+        for(int i=0; i<arrayList.size(); i++){
+            System.out.println(arrayList.get(i));
         }
     }
 }
